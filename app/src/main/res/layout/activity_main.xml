@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    tools:context=".MainActivity">
+
+    <!-- Drawing Canvas -->
+    <com.example.paintappjava.PaintView
+        android:id="@+id/paintView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"
+        android:elevation="4dp" />
+
+    <!-- Color Selection -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Color:"
+        android:textSize="16sp"
+        android:paddingTop="8dp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="4dp">
+
+        <Button
+            android:id="@+id/red"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Red"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#F44336"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/green"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Green"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/blue"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Blue"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#2196F3"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/black"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Black"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#000000"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <!-- Brush Size -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Brush Size:"
+        android:textSize="16sp"
+        android:paddingTop="8dp"
+        android:textStyle="bold" />
+
+    <SeekBar
+        android:id="@+id/seekBrushSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="50"
+        android:progress="10"
+        android:layout_marginTop="4dp" />
+
+    <!-- Tools -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/eraser"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Eraser"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#9E9E9E"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/reset"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Reset"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FF5722"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Save"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3F51B5"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+</LinearLayout>
